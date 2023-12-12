@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.love {
+  position: absolute;
+  top: -20px;
+  color: #d00;
+  animation: filter 5s linear infinite;
+}
+
+.love::before {
+  content: '\f004';
+  font-family: fontAwesome;
+  text-shadow: 0 0 5px #d00,
+    0 0 20px #d00,
+    0 0 50px #d00;
+}
+
+@keyframes filter {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
