@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  background-color: #e8e8e8;
+}
+
+.content {
+  position: relative;
+}
+
+h2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 15rem;
+}
+
+h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 3px #333;
+  filter: blur(3px)
+}
+
+h2:nth-child(3) {
+  color: #fff6;
+  filter: drop-shadow(0 15px 15px #fff);
+  z-index: 1;
+  text-shadow: -15px 15px 15px rgba(0, 0, 0, 0.2),
+    15px -15px 15px rgba(255, 255, 255, 0.2);
+}
+
+h2:nth-child(2) {
+  color: #034094;
+  z-index: 2;
+  animation: wave 4s ease-in-out infinite;
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    clip-path: polygon(0% 45%, 4% 42%, 12% 43%, 13% 40%, 22% 40%, 28% 39%, 32% 40%, 35% 43%, 40% 45%, 46% 49%, 50% 53%, 59% 54%, 55% 53%, 66% 53%, 64% 49%, 83% 47%, 90% 44%, 95% 41%, 99% 38%, 100% 98%, 0% 99%);
+  }
+
+  50% {
+    clip-path: polygon(0% 63%, 4% 61%, 9% 63%, 14% 66%, 14% 66%, 20% 67%, 29% 67%, 36% 67%, 45% 64%, 52% 60%, 60% 57%, 67% 54%, 79% 49%, 85% 47%, 94% 44%, 96% 41%, 100% 37%, 100% 100%, 0% 100%);
+  }
+}
